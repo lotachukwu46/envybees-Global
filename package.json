@@ -7,12 +7,12 @@
     "dev:backend": "nodemon server/server.js",
     "start:backend": "node server/server.js",
     "dev:frontend": "npm run dev --prefix client",
-    "build:frontend": "npm install && npm run build --prefix client",
+    "build:frontend": "npm install --prefix client && npm run build --prefix client",
     "start:frontend": "npm run start --prefix client",
     "dev:full": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "build:full": "npm run build:frontend && npm run start:backend",
     "start:full": "npm run start:frontend && npm run start:backend",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+    "build": "npm install && npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [
     "eCommerce",
