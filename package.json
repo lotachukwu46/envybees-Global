@@ -1,0 +1,44 @@
+{
+  "name": "envybees-global",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">envyBeesGlobal eCommerce store 🛒</h1>",
+  "main": "server/server.js",
+  "scripts": {
+    "dev:backend": "nodemon server/server.js",
+    "start:backend": "node server/server.js",
+    "dev:frontend": "npm run dev --prefix client",
+    "build:frontend": "npm install && npm run build --prefix client",
+    "start:frontend": "npm run start --prefix client",
+    "dev:full": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build:full": "npm run build:frontend && npm run start:backend",
+    "start:full": "npm run start:frontend && npm run start:backend"
+  },
+  "keywords": [
+    "eCommerce",
+    "MERN",
+    "Stripe",
+    "Cloudinary",
+    "React",
+    "Node.js"
+  ],
+  "author": "Lotachukwu Odiegwu (Lota)",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "@stripe/stripe-js": "^4.4.0",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.4.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "ioredis": "^5.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.6.1",
+    "stripe": "^16.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.4"
+  }
+}
