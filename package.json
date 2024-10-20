@@ -10,7 +10,7 @@
     "build:frontend": "npm install --prefix client && npm run build --prefix client",
     "start:frontend": "npm run start --prefix client",
     "dev:full": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
-    "build:full": "npm run build:frontend && npm run start:backend",
+    "build:full": "npm install && npm build:frontend",
     "start:full": "npm run start:frontend && npm run start:backend",
     "build": "npm install && npm install --prefix client && npm run build --prefix client"
   },
